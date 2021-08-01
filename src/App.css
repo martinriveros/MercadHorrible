@@ -1,6 +1,5 @@
 * {
   margin: 0;
-
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
@@ -9,49 +8,92 @@
 }
 
 body {
+  margin: 0;
   padding: 0;
-
+  height: 100vh;
   box-sizing: border-box;
 }
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  column-gap: 0.5em;
+  list-style-type: none;
+}
+
 a:link {
-  color: grey;
+  color: white;
 }
 a:visited {
-  color: grey;
+  color: white;
 }
 a:hover {
-  color: black;
+  color: grey;
 }
 
 a:active {
-  color: grey;
+  color: white;
 }
 
-.navContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+#logo-nav {
+  height: 10vh;
+  width: auto;
 }
-.navList {
-  display: flex;
-  flex-wrap: wrap;
-  text-transform: touppercase;
 
-  list-style-type: none;
-  line-height: 50px;
-  column-gap: 0.8rem;
+#cartIcon {
+  height: 5vh;
+  width: auto;
+}
+
+.logo-container {
+  width: auto;
+}
+
+/* .cardContainer {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  padding: 2em 1em;
+  column-gap: 2em;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  width: 250px;
+} */
+
+.imgThumb {
+  height: 50px;
+  width: 50px;
 }
 
 .logoYMarca {
   display: flex;
-  font-size: 50px;
-}
-
-#logo-nav {
-  height: 8vh;
-  width: auto;
-  border-radius: 50%;
-}
-.logoYMarca > div > span {
-  font-weight: bold;
+  flex-direction: row;
 }
