@@ -11,9 +11,11 @@ function App() {
       <header className="App-header">
         <NavBar/>
       </header>
-      <main className='silence'>
-        <Greetings {...greeting}/>
-        <ItemListContainer />
+      <main className='itemListContainer'>
+        
+        <ItemListContainer>
+          <Greetings {...greeting}/>
+        </ItemListContainer>
       </main>
     </div>
   </>;

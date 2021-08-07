@@ -1,10 +1,10 @@
 import React from 'react'
-import cart from './cart.png'
+import cart from './img/cart.png'
 
 export const CartWidget = () => {
   return (
   
-    <img src={cart} alt="" id='cartIcon' alt='icono de carrito'/>
+    <img src={cart} id='cartIcon' alt='icono de carrito'/>
 
 )}
 ;

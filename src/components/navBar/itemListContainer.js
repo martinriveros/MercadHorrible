@@ -1,12 +1,15 @@
-import React from 'react';
+import { Greetings } from './greetings.js'
+import Contador from './contador.js'
 
-export const ItemListContainer = ()=>{
-
+export const ItemListContainer = (props)=>{
   return (
     <>
       <section id='itemListContainer'>
 
-        Good Morning/Hello Clarice
+       <Greetings/>
+        <Contador
+          initialStateValue={10}
+        />
 
       </section>
 

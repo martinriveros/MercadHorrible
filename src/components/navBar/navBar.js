@@ -11,10 +11,10 @@ export function NavBar (){
     </div>
     <div className='nav-container'>
       <ul className="nav-list">
-        <li className="item-menu"><a href="#">Nosotros</a></li>
-        <li className="item-menu"><a href="#">Contacto</a></li>
-        <li className="item-menu"><a href="#">HOT</a></li>
-        <li className="item-menu"><a href="#">Productos</a></li>
+        <li className="item-menu"><a href="#algo">Nosotros</a></li>
+        <li className="item-menu"><a href="#algo">Contacto</a></li>
+        <li className="item-menu"><a href="#algo">HOT</a></li>
+        <li className="item-menu"><a href="#algo">Productos</a></li>
        </ul>
        <CartWidget/>
     </div>
