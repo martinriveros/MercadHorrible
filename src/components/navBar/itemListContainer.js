@@ -6,11 +6,12 @@ export const ItemListContainer = (props)=>{
     <>
       <section id='itemListContainer'>
 
-       <Greetings/>
+       <Greetings 
+        text1="prueba"
+        text2='de children'>
         <Contador
-          initialStateValue={10}
-        />
-
+          initialStateValue={10}/>
+      </Greetings>
       </section>
 
     </>
