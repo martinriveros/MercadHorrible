@@ -1,28 +1,48 @@
 import React, {useState} from 'react'
 import {VariableButton} from './variableButton.js'
 
-
-
-// componente de clase
-
-
-
 const Contador = ({initialStateValue})=>{
 
-const [counter, setCounter] = useState(initialStateValue)
+const [stockLeft, setStockLeft] = useState(initialStateValue)
+const [cart, setCart] = useState(0)
+
+
+const onAdd=()=>{
+    if(stockLeft>0){
+      setStockLeft(stockLeft-1)
+      setCart(cart+1)
+    } else{
+      alert('no stock left')
+    }
+  }
+
+  const onSub=()=>{
+    if(cart>0){
+      setStockLeft(stockLeft+1)
+      setCart(cart-1)
+    } else{
+      alert('nothing ordered')
+    }
+  }
+  const onReset = ()=>{
+    setStockLeft(initialStateValue)
+    setCart(0)
+  }
+
 
 return (
         <>
-          <div>Estado del contador actual: {counter}</div>
+          <div>Estado del contador actual: {stockLeft}</div>
+          <div>Estado del cart actual: {cart}</div>
           <VariableButton 
             btnName='agregar'
-            btnAction={()=>setCounter(counter+1)}/>
+            btnAction={()=>onAdd()}/>
           <VariableButton 
             btnName='quitar'
-            btnAction={()=>setCounter(counter-1)}/>
+            btnAction={()=>onSub()}/>
           <VariableButton 
             btnName='resetear'
-            btnAction={()=>setCounter(initialStateValue)}/>
+            btnAction={()=>onReset(initialStateValue)}/>
         </>
 )
 }
