@@ -1,9 +1,6 @@
 import './App.css';
 import {NavBar} from './components/navBar/navBar'
-import {Greetings} from './components/navBar/greetings'
-import {ItemListContainer} from './components/navBar/itemListContainer'
-
-const greeting = {text1:"SILENCE!", text2:"I kill you!"}
+import {ItemListContainer} from './components/itemListContainer'
 
 function App() {
   return <>
@@ -13,9 +10,7 @@ function App() {
       </header>
       <main className='itemListContainer'>
         
-        <ItemListContainer>
-          <Greetings {...greeting}/>
-        </ItemListContainer>
+        <ItemListContainer/>
       </main>
     </div>
   </>;

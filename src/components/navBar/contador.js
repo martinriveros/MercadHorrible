@@ -1,11 +1,10 @@
 import React, {useState} from 'react'
 import {VariableButton} from './variableButton.js'
 
-const Contador = ({initialStateValue})=>{
+export const Contador = (initialStateValue)=>{
 
-const [stockLeft, setStockLeft] = useState(initialStateValue)
+const [stockLeft, setStockLeft] = useState(initialStateValue.stock)
 const [cart, setCart] = useState(0)
-
 
 const onAdd=()=>{
     if(stockLeft>0){
@@ -46,5 +45,3 @@ return (
         </>
 )
 }
-
-export default Contador
