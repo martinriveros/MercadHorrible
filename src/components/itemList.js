@@ -1,4 +1,4 @@
-import React, {useState}from 'react';
+import React, {useState, useEffect}from 'react';
 import {data} from '../components/data.js'
 import { Item } from './item.js';
 
@@ -7,17 +7,25 @@ export const ItemList = ()=>{
    const [dataFromFakeApiCall, setdataFromFakeApiCall]=useState([''])
    const [loading, setLoading] = useState('true')
    
-   
 
-   const fakeApiCall = new Promise ((resolve, reject)=>{
 
-      setTimeout(()=>resolve(data),2000)
+   const fakeApiCall = (time)=>new Promise ((resolve, reject)=>{
+
+      setTimeout(()=> {
+         
+         resolve(data)
+       },time)
     
    })
-
-   fakeApiCall.then(res =>{  
-      setdataFromFakeApiCall(res)
-      setLoading(false)}
+   
+   useEffect(
+      
+      ()=>{
+         fakeApiCall(2000)
+         fakeApiCall().then(res =>{
+            setdataFromFakeApiCall(res)
+            setLoading(false)}
+   )},[]
    )
 
     return (
