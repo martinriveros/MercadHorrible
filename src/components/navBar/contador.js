@@ -24,7 +24,7 @@ const onAdd=()=>{
     }
   }
   const onReset = ()=>{
-    setStockLeft(initialStateValue)
+    setStockLeft(initialStateValue.stock)
     setCart(0)
   }
 

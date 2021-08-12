@@ -9,19 +9,19 @@ export const ItemList = ()=>{
    
 
 
-   const fakeApiCall = (time)=>new Promise ((resolve, reject)=>{
+   const fakeApiCall = ()=>new Promise ((resolve, reject)=>{
 
       setTimeout(()=> {
          
          resolve(data)
-       },time)
+       },2000)
     
    })
    
    useEffect(
       
       ()=>{
-         fakeApiCall(2000)
+         fakeApiCall()
          fakeApiCall().then(res =>{
             setdataFromFakeApiCall(res)
             setLoading(false)}
